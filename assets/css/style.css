@@ -1,0 +1,31 @@
+body {
+    background-color: #ea2c49;
+    padding: 0;
+    margin: 0;
+    transition: background-color 2s;
+}
+body.white {
+    background-color: white;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+img.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 720px;
+}
+.logo.red {
+    display: none;
+}
+body.white .logo.red {
+    display: block;
+}
+body.white .logo.white {
+    display: none;
+}

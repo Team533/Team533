@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Team533</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <img src="assets/img/logo.png" class="logo white"/>
+        <img src="assets/img/logo-red.png" class="logo red"/>
+    </div>
+</body>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+    let body = document.body;
+    let className = 'white';
+
+    function effect() {
+        if (body.classList) {
+            body.classList.toggle(className);
+        } else {
+            // For IE9
+            var classes = body.className.split(" ");
+            var i = classes.indexOf(className);
+
+            if (i >= 0)
+                classes.splice(i, 1);
+            else
+                classes.push(className);
+            body.className = classes.join(" ");
+        }
+    }
+
+    setInterval(effect, 15 * 1000);
+});
+</script>
+</html>
